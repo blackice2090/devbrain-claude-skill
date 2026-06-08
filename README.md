@@ -64,6 +64,52 @@ No package to install, no command to run.
 
 ---
 
+## First Run
+
+After copying `CLAUDE.md` and `brain/` into your project, open Claude Code and paste this prompt:
+
+```
+Read CLAUDE.md and the files inside ./brain.
+Interview me one section at a time and fill the DevBrain files.
+```
+
+Claude Code will interview you across six sections:
+
+1. **About Me** — your role, languages, tools, and preferences.
+2. **Projects** — what you are building, the problem, the stack, and the current status.
+3. **AI Instructions** — how the AI should respond and what to avoid.
+4. **Coding Style** — naming, structure, and code preferences.
+5. **Current Focus** — what you are working on right now.
+6. **Decisions** — decisions already made, with short reasons.
+
+After the interview, the `brain/` folder becomes a personalized context layer for the project. Every future session starts from it instead of from zero.
+
+---
+
+## Test the Context
+
+After the first run, verify that DevBrain is working by pasting this prompt into a new Claude Code session:
+
+```
+Read all files inside ./brain.
+
+Now act like this is a fresh Claude Code session.
+
+Summarize:
+1. Who I am as a developer
+2. What project I am building
+3. My coding style
+4. My current focus
+5. My locked decisions
+6. What you should avoid when helping me
+
+Then suggest the next 5 practical steps for the project.
+```
+
+If the answer matches your project, style, and decisions, DevBrain is working.
+
+---
+
 ## Usage Examples
 
 **First-time setup**
