@@ -1,5 +1,7 @@
 # DevBrain Claude Skill
 
+![DevBrain Claude Skill](assets/devbrain-hero.png)
+
 DevBrain gives AI coding agents structured developer context using simple Markdown files.
 
 Instead of re-explaining who you are, what you are building, how you write code, and what decisions you already made at the start of every session, you keep that context in a small `brain/` folder. Claude Code reads it and works from it.
