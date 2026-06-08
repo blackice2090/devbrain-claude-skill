@@ -1,0 +1,17 @@
+# Local Claude Code state
+.claude/
+
+# Node
+node_modules/
+
+# Environment
+.env
+
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+
+# Editor
+.vscode/
