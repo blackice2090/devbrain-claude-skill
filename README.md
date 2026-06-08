@@ -6,6 +6,8 @@ Instead of re-explaining who you are, what you are building, how you write code,
 
 DevBrain v0.1 is **manual Markdown only**. There is no CLI, no MCP server, no database, and no automation. You edit plain files by hand, and that is the whole point.
 
+---
+
 ## Why DevBrain Exists
 
 Most AI coding sessions start from zero. Developers repeatedly explain:
@@ -18,6 +20,8 @@ Most AI coding sessions start from zero. Developers repeatedly explain:
 - what the AI should avoid
 
 DevBrain turns that repeated explanation into a clean, reusable context layer that travels with your project.
+
+---
 
 ## What DevBrain Provides
 
@@ -43,6 +47,8 @@ A lightweight folder of context files plus a `CLAUDE.md` that tells Claude Code 
 └── roadmap.md
 ```
 
+---
+
 ## Installation / Setup
 
 DevBrain is copied into a project, not installed. There is nothing to build or run.
@@ -52,23 +58,33 @@ DevBrain is copied into a project, not installed. There is nothing to build or r
 3. Fill in the `brain/` files with your own context (the files ship as reusable templates with placeholders like `<your name>`).
 4. Start working. Claude Code reads `CLAUDE.md`, which points it at the `brain/` files.
 
-That's it. No package to install, no command to run.
+No package to install, no command to run.
+
+---
 
 ## Usage Examples
 
-**First-time setup.** Paste this into Claude Code (or open `commands/devbrain-init.md`):
+**First-time setup**
+
+Paste this into Claude Code (or open `commands/devbrain-init.md`):
 
 > Initialize DevBrain. Create any missing files in `brain/`, then interview me one section at a time and fill them in.
 
-**Keep context current.** After your focus or a decision changes:
+**Keep context current**
+
+After your focus or a decision changes, paste this:
 
 > Update DevBrain. Ask me what changed, then edit only the relevant `brain/` files and show me a per-file summary.
 
-**Check the brain is still accurate.** Before publishing or after busy changes:
+**Check the brain is still accurate**
+
+Before publishing or after a busy period of changes:
 
 > Review DevBrain. Read all `brain/` files and list anything outdated, contradictory, missing, or too long, grouped by file.
 
 Because the context lives in `brain/`, every later session already knows your stack, style, and current focus without you repeating it.
+
+---
 
 ## Brain Files Explained
 
@@ -79,31 +95,62 @@ Because the context lives in `brain/`, every later session already knows your st
 | `ai-instructions.md` | How the AI should respond and what to avoid. |
 | `coding-style.md` | How you want code written: naming, structure, what to avoid. |
 | `current-focus.md` | What you are working on right now. Keep it short, update often. |
-| `decisions.md` | Decisions already made, with short reasons, so they are not re-litigated. |
+| `decisions.md` | Decisions already made with short reasons, so they are not re-litigated. |
 
 Keep each file short and practical. Long files dilute the useful context.
 
+---
+
 ## Manual Commands
 
-The files in `commands/` are **manual prompt workflows**, not executable slash commands. In v0.1 there is no command runner — you copy the prompt from the file (or the examples above) and paste it into Claude Code.
+The files in `commands/` are **manual prompt workflows**, not executable slash commands.
+
+In v0.1 there is no command runner. You copy the prompt from the file (or use the examples above) and paste it into Claude Code.
 
 - `commands/devbrain-init.md` — set DevBrain up in a project for the first time.
 - `commands/devbrain-update.md` — keep the brain files current as the project changes.
 - `commands/devbrain-review.md` — check the brain files for accuracy and contradictions.
 
-The `prompts/` folder holds smaller reusable prompts (interview, update, project extraction, compression) used the same way.
+The `prompts/` folder holds smaller reusable prompts for interview, update, project extraction, and compression, used the same way.
+
+---
 
 ## Roadmap
 
-v0.1 (current) is manual Markdown only. See `roadmap.md` for detail. Future ideas — explicitly **not** in v0.1 — include example brain files, a setup guide, and possibly a small scaffolding CLI later. MCP, a memory/RAG layer, and sync are long-term ideas, not commitments.
+**v0.1 — current**
+
+Manual Markdown only. No tooling. You edit the `brain/` files by hand and Claude Code reads them.
+
+**v0.2 — planned**
+
+- Example brain files for different developer types.
+- A short setup guide with screenshots.
+- Optional prompt files for guided interviews and updates.
+
+**v0.3 — ideas**
+
+- A small scaffolding helper to create the `brain/` folder structure.
+- A helper to summarize and compress long brain files.
+
+**Later — not committed**
+
+- MCP integration.
+- A memory or RAG layer for large project histories.
+- Sync across machines.
+
+See `roadmap.md` for full detail and the guiding principle.
+
+---
 
 ## What DevBrain Is Not
 
-- It is **not** a CLI tool (v0.1 has no commands to run).
+- It is **not** a CLI tool — v0.1 has no commands to run.
 - It is **not** an MCP server.
 - It is **not** a database, memory engine, or RAG system.
 - It is **not** automation — you edit the files yourself.
 - It does **not** try to clone your entire mind. It stores the practical context an AI agent needs to be useful.
+
+---
 
 ## License
 

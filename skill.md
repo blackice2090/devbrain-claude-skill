@@ -4,6 +4,8 @@ DevBrain gives AI coding agents structured developer context using simple Markdo
 
 DevBrain v0.1 is **manual Markdown only** — no CLI, no MCP, no database, no automation. You edit plain files by hand and Claude Code reads them.
 
+---
+
 ## What It Provides
 
 A `brain/` folder of context files, plus a `CLAUDE.md` that tells Claude Code to read them first.
@@ -18,12 +20,22 @@ brain/
 └── decisions.md        # decisions already made
 ```
 
+---
+
 ## How to Use It
 
 1. Copy `CLAUDE.md` and `brain/` into your project root.
-2. Fill the `brain/` files with your own context (they ship as templates).
+2. Fill the `brain/` files with your own context (they ship as templates with placeholders).
 3. Work in Claude Code — it reads `CLAUDE.md`, which points at the brain files.
 
-The `commands/` folder holds **manual prompt workflows** (init, update, review) — copy/paste prompts, not executable slash commands.
+---
+
+## Manual Commands
+
+The `commands/` folder holds **manual prompt workflows** for init, update, and review.
+
+These are copy/paste prompts, not executable slash commands. See each file for the full prompt text.
+
+---
 
 See [README.md](README.md) for full setup, usage examples, and roadmap.
